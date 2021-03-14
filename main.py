@@ -1,4 +1,3 @@
-import os
 from pprint import pprint as pp
 
 
@@ -12,6 +11,8 @@ def get_cook_book(file_name):
             else:
                 cook_book[temp_list[0]] = generate_dict(temp_list[2::])
                 temp_list.clear()
+        cook_book[temp_list[0]] = generate_dict(temp_list[2::])
+        temp_list.clear()
     return cook_book
 
 
